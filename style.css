@@ -1,0 +1,169 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border;
+}
+
+html{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(#e66465, #9198e5);
+}
+
+.body{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(#e66465, #9198e5);
+    
+}
+
+.time-select-container{
+    height: 15vh;
+    width: 100vw;
+}
+
+.player-container-app{
+    height: 50vh;
+    width: 100vw;
+    display: block;
+    align-items: center;
+}
+
+.sound-picker-container{
+    height: 20vh;
+    width: 100vw;
+    display: flex;
+}
+
+.sound-picker{
+    width: 50%;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+button{
+    margin: 60px auto;
+    height: 30px;
+    padding: 5px;
+}
+
+.time-select{
+    margin: 0 auto;
+    display: flex;
+    width: 50%;
+    align-items: center;
+}
+
+.player-container {
+    height: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.player-container svg {
+    position: absolute;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    pointer-events: none;
+}
+
+.time-display{
+    position: absolute;
+    bottom: 2%;
+    color: white;
+    font-size: 50px;
+}
+video{
+   position: fixed;
+   top: 0%;
+   left: 0%;
+   width: 100%;
+   z-index: -10;
+}
+
+.play {
+    position: absolute;
+    margin: 0 auto;
+}
+
+.time-select button, .sound-picker button{
+    color: white;
+    width: 30%;
+    height: 10%;
+    background: none;
+    border: 2px solid white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 20px;
+    transition: all .5s ease-in;
+}
+
+
+
+.time-select button:hover{
+    color: black;
+    background: white;
+}
+
+.sound-picker button{
+    border: none;
+    height: 120px;
+    width: 120px;
+    padding: 20px;
+}
+
+.play:hover{
+    cursor: pointer;
+}
+
+.sound-picker button:nth-child(1){
+    background: #4972a1;
+    border-radius: 50%;
+}
+
+.sound-picker button:nth-child(2){
+    background: #df922f;
+    border-radius: 50%;
+}
+
+.sound-picker button:nth-child(3){
+    background: #6cd300;
+    border-radius: 50%;
+}
+
+.sound-picker button img{
+    height: 100%;
+}
+
+.blisslogo{
+    height: 10vh;
+    margin:20px auto 0 auto; 
+    align-items: center; 
+    justify-content: center; 
+    display: flex;
+}
+
+@media only screen and (max-width: 1460px){
+    video{
+        display: none;
+    }
+    .time-display {
+        top: 90%;
+    }
+}
+
+@media only screen and (max-width: 525px){
+    .time-select button{
+        font-size: 14px;
+    }
+    .sound-picker button {
+        margin: 0 10px;
+    }
+}
