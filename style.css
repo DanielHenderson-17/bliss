@@ -105,8 +105,6 @@ video{
     transition: all .5s ease-in;
 }
 
-
-
 .time-select button:hover{
     color: black;
     background: white;
@@ -123,6 +121,12 @@ video{
 .play:hover{
     cursor: pointer;
 }
+button{ 
+    transition: all .01s linear; 
+}
+button:hover { 
+    transform: scale(1.1); 
+    }
 
 .sound-picker button:nth-child(1){
     background: linear-gradient(#479ec7, #f3f3f5);
@@ -155,7 +159,7 @@ video{
 
 .sound-picker button:nth-child(6){
     background: rgb(63,94,251);
-    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    background: linear-gradient(0deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
     border-radius: 50%;
 }
 
@@ -214,6 +218,10 @@ input[type=range][orient=vertical]
 }
 
 @media only screen and (max-width: 525px){
+    html{
+        overflow-y: hidden;
+    }
+
     .time-select button{
         font-size: 14px;
     }
@@ -231,17 +239,20 @@ input[type=range][orient=vertical]
     .player-container{
         height: 40vh;
     }
+    .player-container-app {
+        height: 40vh;
+    }
     .player-container svg{
         width: 50%;
     }
     .time-display{
-        top: 100%;
+        top: 90%;
     }
     .speaker{
         display: none;
     }
     .blisslogo{
-        width: 50%;
-        height: 50%;
+        width: 80%;
+        height: 80%;
     }
 }
