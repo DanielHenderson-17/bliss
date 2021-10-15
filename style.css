@@ -234,4 +234,7 @@ input[type=range][orient=vertical]
     .time-display{
         top: 80%;
     }
+    .speaker{
+        display: none;
+    }
 }
