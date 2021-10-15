@@ -228,13 +228,20 @@ input[type=range][orient=vertical]
         margin: 0 40px; 
         justify-content: start;
     }
+    .player-container{
+        height: 40vh;
+    }
     .player-container svg{
         width: 50%;
     }
     .time-display{
-        top: 80%;
+        top: 100%;
     }
     .speaker{
         display: none;
+    }
+    .blisslogo{
+        width: 50%;
+        height: 50%;
     }
 }
