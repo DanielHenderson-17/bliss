@@ -218,7 +218,12 @@ input[type=range][orient=vertical]
 }
 
 @media only screen and (max-width: 525px){
+    body{
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
     html{
+        height: 99vh;
         overflow-y: hidden;
     }
 
