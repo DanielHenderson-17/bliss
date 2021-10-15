@@ -8,7 +8,7 @@
     <title>Bliss Relaxation</title>
 </head>
 <body>
-
+    
     <div class="vid-container">
         <video loop muted>
             <source src="./video/beach.mp4" type="video/mp4"> 
@@ -52,8 +52,12 @@
                 stroke-width="20"
                 />
             </svg>
-            <h3 class="time-display">0:00</h3>                        
+            <h3 class="time-display">0:00</h3>                   
         </div>
+        <div class="speaker">
+            <img src="./svg/speaker.png" alt="speaker"> 
+            <input type="range" orient="horizontal" id="volume-control">   
+        </div> 
     </div>
 
     <div class="time-select-container">
@@ -63,6 +67,7 @@
             <button data-time="300">5 Min</button>
             <button data-time="600">10 Min</button>
         </div>
+        
     </div>
 
         <div class="sound-picker-container">

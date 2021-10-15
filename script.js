@@ -32,6 +32,16 @@ const app = () => {
         checkPlaying(song);
     });
 
+    //Volume
+    let audio = song;
+
+    let volume = document.querySelector("#volume-control");
+    volume.addEventListener("change", function(e) {
+    audio.volume = e.currentTarget.value / 100;
+    });
+
+    console.log(audio);
+
     //Select sound
     timeSelect.forEach(option =>{
         option.addEventListener('click', function(){
@@ -65,7 +75,7 @@ const app = () => {
         outline.style.strokeDashoffset = progress;
 
         //Animate text
-        timeDisplay.textContent = `${minutes}:${seconds}`;
+        timeDisplay.textContent = `${minutes}:${(seconds <10? '0' + seconds:seconds)}`;
 
         if(currentTime > fakeDuration){
             song.pause();

@@ -150,6 +150,39 @@ video{
     display: flex;
 }
 
+input[type=range][orient=vertical]
+{
+    writing-mode: bt-lr; /* IE */
+    -webkit-appearance: slider-vertical; /* WebKit */
+    width: 8px;
+    height: 100px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.speaker{
+    display: flex;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.speaker img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.speaker input:hover{
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 1460px){
     video{
         display: none;
