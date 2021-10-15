@@ -113,6 +113,7 @@ video{
 }
 
 .sound-picker button{
+    margin: 0 20px;
     border: none;
     height: 120px;
     width: 120px;
@@ -124,17 +125,37 @@ video{
 }
 
 .sound-picker button:nth-child(1){
-    background: #4972a1;
+    background: linear-gradient(#479ec7, #f3f3f5);
     border-radius: 50%;
 }
 
 .sound-picker button:nth-child(2){
-    background: #df922f;
+    background: rgb(223,146,47);
+    background: radial-gradient(circle, rgba(223,146,47,1) 37%, rgba(212,205,185,1) 100%);
     border-radius: 50%;
 }
 
 .sound-picker button:nth-child(3){
-    background: #6cd300;
+    background: rgb(108,211,0);
+    background: radial-gradient(circle, rgba(108,211,0,1) 37%, rgba(170,208,163,1) 100%);
+    border-radius: 50%;
+}
+
+.sound-picker button:nth-child(4){
+    background: rgb(167,81,11);
+    background: radial-gradient(circle, rgba(167,81,11,1) 37%, rgba(235,116,20,1) 100%);
+    border-radius: 50%;
+}
+
+.sound-picker button:nth-child(5){
+    background: rgb(212,175,55);
+    background: radial-gradient(circle, rgba(212,175,55,1) 37%, rgba(249,226,154,1) 100%);
+    border-radius: 50%;
+}
+
+.sound-picker button:nth-child(6){
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
     border-radius: 50%;
 }
 
@@ -198,5 +219,19 @@ input[type=range][orient=vertical]
     }
     .sound-picker button {
         margin: 0 10px;
+    }
+    .sound-picker-container{
+        justify-content: start;
+        overflow-x: scroll;
+    }
+    .sound-picker{
+        margin: 0 40px; 
+        justify-content: start;
+    }
+    .player-container svg{
+        width: 50%;
+    }
+    .time-display{
+        top: 80%;
     }
 }
