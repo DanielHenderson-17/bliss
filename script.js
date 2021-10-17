@@ -84,6 +84,7 @@ const app = () => {
             video.pause();
         }
     };
+    
 };
 
 app();

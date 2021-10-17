@@ -13,17 +13,16 @@ html{
 .body{
     width: 100vw;
     height: 100vh;
-    background: linear-gradient(#e66465, #9198e5);
-    
+    background-color: linear-gradient(#e66465, #9198e5);   
 }
 
 .time-select-container{
-    height: 15vh;
+    height: 10vh;
     width: 100vw;
 }
 
 .player-container-app{
-    height: 50vh;
+    height: 45vh;
     width: 100vw;
     display: block;
     align-items: center;
@@ -74,9 +73,18 @@ button{
     pointer-events: none;
 }
 
+.speakerIcon{
+    position: absolute;
+    left: 49%;
+    right: 50%;
+}
+.speakerIcon:hover { 
+    transform: scale(1.1); 
+    cursor: pointer;
+}
 .time-display{
     position: absolute;
-    bottom: 2%;
+    bottom: -5%;
     color: white;
     font-size: 50px;
 }
@@ -208,9 +216,30 @@ input[type=range][orient=vertical]
     cursor: pointer;
 }
 
+
+.speakerIcon {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+.card, .card-body{
+    width: 10%;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    margin: 0 auto;
+}
+#volume-control:hover{
+    cursor: pointer;
+}
+
 @media only screen and (max-width: 1460px){
     video{
-        display: none;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 390%;
+        margin-left: 50vw; transform: translate(-50%); 
     }
     .time-display {
         top: 90%;
@@ -220,10 +249,6 @@ input[type=range][orient=vertical]
 @media only screen and (max-width: 525px){
     body{
         overflow-x: hidden;
-        overflow-y: hidden;
-    }
-    html{
-        height: 99vh;
         overflow-y: hidden;
     }
 
@@ -259,5 +284,21 @@ input[type=range][orient=vertical]
     .blisslogo{
         width: 80%;
         height: 80%;
+    }
+    .time-select-container{
+        height: 20vh;
+        width: 100vw;
+        margin: 0 5px;
+    }
+    .time-select{
+        width: 60%;
+    }
+    .time-select-container button{
+        width: 80px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        margin-right: 10px;
     }
 }

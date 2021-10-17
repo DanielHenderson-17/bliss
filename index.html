@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>Bliss Relaxation</title>
 </head>
-<body>
+<body class="bg-transparent">
     
     <div class="vid-container">
         <video loop muted>
@@ -54,11 +55,28 @@
             </svg>
             <h3 class="time-display">0:00</h3>                   
         </div>
-        <div class="speaker">
-            <img src="./svg/speaker.png" alt="speaker"> 
-            <input type="range" orient="horizontal" id="volume-control">   
-        </div> 
-    </div>
+
+
+        <p>
+                <div class="speaker" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    <img src="./svg/speaker.png" alt="speaker" class="speakerIcon"> 
+                </div> 
+          </p>
+          <div class="collapse" id="collapseExample" width="40%">
+            <div class="card card-body" width="40%">
+                <input type="range" orient="horizontal" id="volume-control">
+            </div>
+          </div>
+
+
+
+
+
+
+    
+
+    
+
 
     <div class="time-select-container">
         
@@ -80,7 +98,11 @@
                 <button data-sound="./sounds/lofi.mp3" data-video="./video/lofi.mp4"><img src="./svg/lofi.svg" alt="Lo Fi Hip Hop" width="80px"></button>
             </div>
         </div>
+    </div>
 
     <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
