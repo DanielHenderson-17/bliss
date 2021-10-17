@@ -248,8 +248,7 @@ input[type=range][orient=vertical]
 
 @media only screen and (max-width: 525px){
     body{
-        overflow-x: hidden;
-        overflow-y: hidden;
+        overflow-x: hidden;   
     }
 
     .time-select button{
@@ -267,7 +266,7 @@ input[type=range][orient=vertical]
         justify-content: start;
     }
     .player-container{
-        height: 40vh;
+        height: 30vh;
     }
     .player-container-app {
         height: 40vh;
@@ -276,7 +275,7 @@ input[type=range][orient=vertical]
         width: 50%;
     }
     .time-display{
-        top: 90%;
+        top: 100%;
     }
     .speaker{
         display: none;
