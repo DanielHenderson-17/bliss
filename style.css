@@ -1,303 +1,410 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border;
 }
 
-html{
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(#e66465, #9198e5);
+html {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(#e66465, #9198e5);
 }
 
-.body{
-    width: 100vw;
-    height: 100vh;
-    background-color: linear-gradient(#e66465, #9198e5);   
+.body {
+  width: 100vw;
+  height: 100vh;
+  background-color: linear-gradient(#e66465, #9198e5);
 }
 
-.time-select-container{
-    height: 10vh;
-    width: 100vw;
+.time-select-container {
+  height: 10vh;
+  width: 100vw;
 }
 
-.player-container-app{
-    height: 45vh;
-    width: 100vw;
-    display: block;
-    align-items: center;
+.player-container-app {
+  height: 45vh;
+  width: 100vw;
+  display: block;
+  align-items: center;
 }
 
-.sound-picker-container{
-    height: 20vh;
-    width: 100vw;
-    display: flex;
+.sound-picker-container {
+  height: 20vh;
+  width: 100vw;
+  display: flex;
 }
 
-.sound-picker{
-    width: 50%;
-    display: flex;
-    margin: 0 auto;
-    align-items: center;
-    justify-content: space-evenly;
+.sound-picker {
+  width: 50%;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
-button{
-    margin: 60px auto;
-    height: 30px;
-    padding: 5px;
+button {
+  margin: 60px auto;
+  height: 30px;
+  padding: 5px;
 }
 
-.time-select{
-    margin: 0 auto;
-    display: flex;
-    width: 50%;
-    align-items: center;
+.time-select {
+  margin: 0 auto;
+  display: flex;
+  width: 50%;
+  align-items: center;
 }
 
 .player-container {
-    height: 100%;
-    justify-content: space-evenly;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    position: relative;
+  height: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .player-container svg {
-    position: absolute;
-    height: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-90deg);
-    pointer-events: none;
+  position: absolute;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  pointer-events: none;
 }
 
-.speakerIcon{
-    position: absolute;
-    left: 49%;
-    right: 50%;
+.speakerIcon {
+  position: absolute;
+  left: 49%;
+  right: 50%;
 }
-.speakerIcon:hover { 
-    transform: scale(1.1); 
-    cursor: pointer;
+.speakerIcon:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
-.time-display{
-    position: absolute;
-    bottom: -5%;
-    color: white;
-    font-size: 50px;
+.time-display {
+  position: absolute;
+  bottom: -5%;
+  color: white;
+  font-size: 50px;
 }
-video{
-   position: fixed;
-   top: 0%;
-   left: 0%;
-   width: 100%;
-   z-index: -10;
+video {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  z-index: -10;
 }
 
 .play {
-    position: absolute;
-    margin: 0 auto;
+  position: absolute;
+  margin: 0 auto;
 }
 
-.time-select button, .sound-picker button{
-    color: white;
-    width: 30%;
-    height: 10%;
-    background: none;
-    border: 2px solid white;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 20px;
-    transition: all .5s ease-in;
+.time-select button,
+.sound-picker button {
+  color: white;
+  width: 30%;
+  height: 10%;
+  background: none;
+  border: 2px solid white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 20px;
+  transition: all 0.5s ease-in;
 }
 
-.time-select button:hover{
-    color: black;
-    background: white;
+.time-select button:hover {
+  color: black;
+  background: white;
 }
 
-.sound-picker button{
-    margin: 0 20px;
-    border: none;
-    height: 120px;
-    width: 120px;
-    padding: 20px;
+.sound-picker button {
+  margin: 0 20px;
+  border: none;
+  height: 120px;
+  width: 120px;
+  padding: 20px;
 }
 
-.play:hover{
-    cursor: pointer;
+.play:hover {
+  cursor: pointer;
 }
-button{ 
-    transition: all .01s linear; 
+button {
+  transition: all 0.01s linear;
 }
-button:hover { 
-    transform: scale(1.1); 
-    }
-
-.sound-picker button:nth-child(1){
-    background: linear-gradient(#479ec7, #f3f3f5);
-    border-radius: 50%;
+button:hover {
+  transform: scale(1.1);
 }
 
-.sound-picker button:nth-child(2){
-    background: rgb(223,146,47);
-    background: radial-gradient(circle, rgba(223,146,47,1) 37%, rgba(212,205,185,1) 100%);
-    border-radius: 50%;
+.sound-picker button:nth-child(1) {
+  background: linear-gradient(#479ec7, #f3f3f5);
+  border-radius: 50%;
 }
 
-.sound-picker button:nth-child(3){
-    background: rgb(108,211,0);
-    background: radial-gradient(circle, rgba(108,211,0,1) 37%, rgba(170,208,163,1) 100%);
-    border-radius: 50%;
+.sound-picker button:nth-child(2) {
+  background: rgb(223, 146, 47);
+  background: radial-gradient(
+    circle,
+    rgba(223, 146, 47, 1) 37%,
+    rgba(212, 205, 185, 1) 100%
+  );
+  border-radius: 50%;
 }
 
-.sound-picker button:nth-child(4){
-    background: rgb(167,81,11);
-    background: radial-gradient(circle, rgba(167,81,11,1) 37%, rgba(235,116,20,1) 100%);
-    border-radius: 50%;
+.sound-picker button:nth-child(3) {
+  background: rgb(108, 211, 0);
+  background: radial-gradient(
+    circle,
+    rgba(108, 211, 0, 1) 37%,
+    rgba(170, 208, 163, 1) 100%
+  );
+  border-radius: 50%;
 }
 
-.sound-picker button:nth-child(5){
-    background: rgb(212,175,55);
-    background: radial-gradient(circle, rgba(212,175,55,1) 37%, rgba(249,226,154,1) 100%);
-    border-radius: 50%;
+.sound-picker button:nth-child(4) {
+  background: rgb(167, 81, 11);
+  background: radial-gradient(
+    circle,
+    rgba(167, 81, 11, 1) 37%,
+    rgba(235, 116, 20, 1) 100%
+  );
+  border-radius: 50%;
 }
 
-.sound-picker button:nth-child(6){
-    background: rgb(63,94,251);
-    background: linear-gradient(0deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
-    border-radius: 50%;
+.sound-picker button:nth-child(5) {
+  background: rgb(212, 175, 55);
+  background: radial-gradient(
+    circle,
+    rgba(212, 175, 55, 1) 37%,
+    rgba(249, 226, 154, 1) 100%
+  );
+  border-radius: 50%;
 }
 
-.sound-picker button img{
-    height: 100%;
+.sound-picker button:nth-child(6) {
+  background: rgb(63, 94, 251);
+  background: linear-gradient(
+    0deg,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
+  border-radius: 50%;
 }
 
-.blisslogo{
-    height: 10vh;
-    margin:20px auto 0 auto; 
-    align-items: center; 
-    justify-content: center; 
-    display: flex;
+.sound-picker button img {
+  height: 100%;
 }
 
-input[type=range][orient=vertical]
-{
-    writing-mode: bt-lr; /* IE */
-    -webkit-appearance: slider-vertical; /* WebKit */
-    width: 8px;
-    height: 100px;
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
-    display: flex;
+.blisslogo {
+  height: 10vh;
+  margin: 20px auto 0 auto;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
-.speaker{
-    display: flex;
-    padding: 5px;
-    width: 30px;
-    height: 30px;
-    justify-content: center;
-    border-radius: 50%;
-    margin: 0 auto;
+input[type="range"][orient="vertical"] {
+  writing-mode: bt-lr; /* IE */
+  -webkit-appearance: slider-vertical; /* WebKit */
+  width: 8px;
+  height: 100px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
-.speaker img{
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    margin-right: 10px;
+.speaker {
+  display: flex;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 auto;
 }
 
-.speaker input:hover{
-    cursor: pointer;
+.speaker img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
 }
 
+.speaker input:hover {
+  cursor: pointer;
+}
 
 .speakerIcon {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.card,
+.card-body {
+  width: 10%;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  margin: 0 auto;
+}
+#volume-control:hover {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1460px) {
+  video {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 390%;
+    margin-left: 50vw;
+    transform: translate(-50%);
   }
-.card, .card-body{
-    width: 10%;
-    background-color: transparent;
-    border: none;
+  .time-display {
+    top: 90%;
+  }
+}
+
+/* 4K Display Scaling */
+@media only screen and (min-width: 2560px) and (min-height: 1440px) {
+  .time-display {
+    font-size: 100px;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-right: 80px;
+  }
+
+  .time-select button,
+  .sound-picker button {
+    font-size: 40px;
+  }
+
+  .sound-picker button {
+    height: 220px;
+    width: 220px;
+    padding: 35px;
+  }
+
+  .play {
+    transform: scale(2);
+    left: 50.5%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(2);
+  }
+
+  .speaker {
+    width: 60px;
+    height: 60px;
+    top: 20%;
+    right: 20%;
+    transform: none;
+  }
+
+  .speaker img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .blisslogo {
+    height: 18vh;
+  }
+
+  .time-select button {
+    height: 20%;
+    padding: 15px;
+    font-size: 36px;
+  }
+
+  .time-select {
+    width: 60%;
+  }
+
+  .sound-picker {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 525px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .time-select button {
+    font-size: 14px;
+  }
+
+  .sound-picker-container {
+    height: 30vh;
+    justify-content: center;
+    overflow: visible;
+    padding-top: 80px;
     display: flex;
+    align-items: center;
+  }
+
+  .sound-picker {
     margin: 0 auto;
-}
-#volume-control:hover{
-    cursor: pointer;
-}
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    width: 90%;
+    max-width: 380px;
+  }
 
-@media only screen and (max-width: 1460px){
-    video{
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        width: 390%;
-        margin-left: 50vw; transform: translate(-50%); 
-    }
-    .time-display {
-        top: 90%;
-    }
-}
+  .sound-picker button {
+    margin: 0;
+    height: 100px;
+    width: 100px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-@media only screen and (max-width: 525px){
-    body{
-        overflow-x: hidden;   
-    }
+  .sound-picker button img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
 
-    .time-select button{
-        font-size: 14px;
-    }
-    .sound-picker button {
-        margin: 0 10px;
-    }
-    .sound-picker-container{
-        justify-content: start;
-        overflow-x: scroll;
-    }
-    .sound-picker{
-        margin: 0 40px; 
-        justify-content: start;
-    }
-    .player-container{
-        height: 30vh;
-    }
-    .player-container-app {
-        height: 40vh;
-    }
-    .player-container svg{
-        width: 50%;
-    }
-    .time-display{
-        top: 100%;
-    }
-    .speaker{
-        display: none;
-    }
-    .blisslogo{
-        width: 80%;
-        height: 80%;
-    }
-    .time-select-container{
-        height: 20vh;
-        width: 100vw;
-        margin: 0 5px;
-    }
-    .time-select{
-        width: 60%;
-    }
-    .time-select-container button{
-        width: 80px;
-        justify-content: center;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        margin-right: 10px;
-    }
+  .player-container {
+    height: 30vh;
+  }
+  .player-container-app {
+    height: 35vh;
+  }
+  .player-container svg {
+    width: 50%;
+  }
+  .time-display {
+    top: 100%;
+  }
+  .speaker {
+    display: none;
+  }
+  .blisslogo {
+    width: 80%;
+    height: 80%;
+  }
+  .time-select-container {
+    height: 15vh;
+    width: 100vw;
+    margin: 0 5px;
+  }
+  .time-select {
+    width: 60%;
+  }
+  .time-select-container button {
+    width: 80px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-right: 10px;
+  }
 }
